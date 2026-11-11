@@ -6,3 +6,9 @@ class Product:
 
     def get_details(self) -> str:
         return f'{self.name} - ${self.price:.2f}'
+
+    def apply_discount(self, percentage: float) -> float:
+        if not 0 <= percentage <= 100:
+            raise ValueError("Discount must be between 0 and 100")
+
+        return self.price * (1 - percentage / 100)
