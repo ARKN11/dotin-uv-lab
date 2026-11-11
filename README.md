@@ -66,6 +66,6 @@ The application creates sample customer and product objects and displays an orde
 
 This repository is a hands-on learning project. It will evolve as new Python backend development concepts are introduced throughout the internship.
 
-## License
+## Note
 
 This project is for educational purposes.
