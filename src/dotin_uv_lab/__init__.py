@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from dotin-uv-lab!")
+"""Dotin backend learning project package."""
