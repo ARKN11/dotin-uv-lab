@@ -1,7 +1,9 @@
-from dotin_uv_lab.customers import Customer
-from dotin_uv_lab.products import Product
+"""Order-related application service functions."""
+
+from dotin_uv_lab.customers.models import Customer
+from dotin_uv_lab.products.models import Product
+
 
 def build_order_summary(customer: Customer, product: Product) -> str:
-    customer_details = customer.get_details()
-    product_details = product.get_details()
-    return f"Order Summary:\n{customer_details}\n{product_details}"
+    """Build a display summary from a customer and a product."""
+    return f"Order Summary:\n{customer.get_details()}\n{product.get_details()}"

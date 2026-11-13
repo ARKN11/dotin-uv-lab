@@ -1,17 +1,28 @@
 [project]
 name = "dotin-uv-lab"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "A practical Python backend engineering learning project"
 readme = "README.md"
-authors = [
-    { name = "ARKN", email = "amirreza.kordnaeij@gmail.com" }
-]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pydantic>=2.12.0",
+    "pydantic-settings>=2.10.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+]
 
 [project.scripts]
-dotin-uv-lab = "dotin_uv_lab:main"
+dotin-uv-lab = "dotin_uv_lab.main:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.mypy]
+python_version = "3.14"
+mypy_path = "src"
+packages = ["dotin_uv_lab"]
+strict = true
