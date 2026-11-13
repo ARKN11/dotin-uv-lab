@@ -1,12 +1,13 @@
 """Environment-based application settings."""
-
+from typing import Any
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     """Application configuration loaded from environment variables or .env."""
-
+    def __init__(self, **data: Any) -> None:
+        super().__init__(**data)
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
