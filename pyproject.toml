@@ -27,3 +27,6 @@ python_version = "3.14"
 mypy_path = "src"
 packages = ["dotin_uv_lab"]
 strict = true
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
